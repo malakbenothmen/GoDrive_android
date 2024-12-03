@@ -33,12 +33,12 @@ public class filter_result extends AppCompatActivity {
 
         recycleFilter = findViewById(R.id.recyclerViewResult);
         recycleFilter.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-        initializeCars();
-        carAdapter = new AdapterCar(carList);
+        //initializeCars();
+        carAdapter = new AdapterCar(this,carList);
         recycleFilter.setAdapter(carAdapter);
 
     }
-    private void initializeCars() {
+ /*   private void initializeCars() {
         carList = new ArrayList<>();
         carList.add(new Car("Jaguar F Pace", "Automatic", 4.8, 200, R.drawable.maserati));
         carList.add(new Car("Jaguar F Pace", "Automatic", 3.8, 150, R.drawable.red_car));
@@ -46,5 +46,5 @@ public class filter_result extends AppCompatActivity {
         carList.add(new Car("Jaguar F Pace", "Automatic", 4.8, 200, R.drawable.maserati));
         carList.add(new Car("Jaguar F Pace", "Automatic", 3.8, 150, R.drawable.red_car));
         carList.add(new Car("Jaguar F Pace", "Automatic", 4.1, 300, R.drawable.black_car));
-    }
+    }*/
 }

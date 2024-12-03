@@ -2,18 +2,28 @@ package com.example.godrivelauco;
 
 public class Brand {
     private String name;
-    private int logoResource;
+    private String logoUrl; // Changé de int à String pour stocker l'URL de l'image
 
-    public Brand(String name, int logoResource) {
+    public Brand() {} // Constructeur vide requis pour Firebase
+
+    public Brand(String name, String logoUrl) {
         this.name = name;
-        this.logoResource = logoResource;
+        this.logoUrl = logoUrl;
     }
 
     public String getName() {
         return name;
     }
 
-    public int getLogoResource() {
-        return logoResource;
+    public String getLogoUrl() {
+        return logoUrl;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setLogoUrl(String logoUrl) {
+        this.logoUrl = logoUrl;
     }
 }

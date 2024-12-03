@@ -1,52 +1,38 @@
 package com.example.godrivelauco;
 
 public class Car {
-    static int count = 0 ;
-    private int id;
     private String name;
     private String transmission;
     private double rating;
     private int pricePerDay;
-    private int imageResourceId;
+    private String imageResource;  // Nom de la ressource drawable
     private boolean isFavorite;
 
-    public Car(String name, String transmission, double rating, int pricePerDay, int imageResourceId) {
-        this.id=count;
-        count++;
+    // Constructeur vide pour Firebase
+    public Car() {}
+
+    public Car(String name, String transmission, double rating, int pricePerDay, String imageResource) {
         this.name = name;
         this.transmission = transmission;
         this.rating = rating;
         this.pricePerDay = pricePerDay;
-        this.imageResourceId = imageResourceId;
+        this.imageResource = imageResource;
         this.isFavorite = false;
     }
 
+    // Getters
+    public String getName() { return name; }
+    public String getTransmission() { return transmission; }
+    public double getRating() { return rating; }
+    public int getPricePerDay() { return pricePerDay; }
+    public String getImageResource() { return imageResource; }
+    public boolean isFavorite() { return isFavorite; }
 
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getTransmission() {
-        return transmission;
-    }
-
-    public double getRating() {
-        return rating;
-    }
-
-    public int getPricePerDay() {
-        return pricePerDay;
-    }
-
-    public int getImageResourceId() {
-        return imageResourceId;
-    }
-
-    public boolean isFavorite() {
-        return isFavorite;
-    }
+    // Setters pour Firebase
+    public void setName(String name) { this.name = name; }
+    public void setTransmission(String transmission) { this.transmission = transmission; }
+    public void setRating(double rating) { this.rating = rating; }
+    public void setPricePerDay(int pricePerDay) { this.pricePerDay = pricePerDay; }
+    public void setImageResource(String imageResource) { this.imageResource = imageResource; }
+    public void setFavorite(boolean favorite) { isFavorite = favorite; }
 }
